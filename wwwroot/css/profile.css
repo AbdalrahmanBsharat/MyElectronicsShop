@@ -1,0 +1,94 @@
+﻿body {
+    font-family: 'Arial', sans-serif;
+    color: #ffffff;
+    background-color: #1a1a1a;
+    backdrop-filter: blur(3px);
+    overflow-x: hidden;
+}
+.container {
+    max-width: 600px;
+    margin: auto;
+    text-align: center;
+    background-color: #1a1a1a;
+    padding: 20px;
+    border-radius: 20px;
+    
+}
+
+.card {
+    border: 3px #ff8c00;
+    border-radius: 20px;
+    background-color: #1a1a1a;
+    overflow: hidden;
+    color: #ffffff;
+    box-shadow: 0 4px 10px rgba(255, 140, 0, 0.5);
+}
+
+.card-header {
+    padding: 15px;
+    border-bottom: none; /* Removes bottom border */
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    background-color: #ff8c00;
+    color: #1a1a1a;
+    font-weight: bold;
+}
+
+.card-body {
+    padding: 20px;
+}
+
+.form-label {
+    font-weight: bold;
+    color: #ff8c00;
+}
+
+/* Style the email field */
+.form-control {
+    border: none; /* Removes inner border */
+    border-radius: 10px;
+    padding: 10px;
+    background-color: #ffffff !important; /* White background for email field */
+    color: #000000; /* Black text for visibility */
+    transition: 0.3s;
+    outline: none; /* Removes focus outline */
+}
+
+/* Keep email field background white even when focused */
+.form-control:focus {
+    background-color: #ffffff !important;
+    color: #000000;
+    border: none;
+    outline: none;
+    box-shadow: none;
+}
+
+.btn-success {
+    background-color: #ff8c00;
+    border-color: #ff8c00;
+    color: #ffffff;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.btn-success:hover {
+    background-color: #ff4500;
+    border-color: #ff4500;
+    transform: scale(1.1);
+}
+
+.btn-secondary {
+    background-color: #6c757d;
+    border-color: #6c757d;
+    color: #ffffff;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.btn-secondary:hover {
+    background-color: #5a6268;
+    border-color: #545b62;
+    transform: scale(1.1);
+}
+
+.text-danger {
+    color: #ff4500;
+}

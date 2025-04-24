@@ -1,0 +1,41 @@
+﻿@model List<Product>
+@{
+    ViewData["Title"] = "Admin Page";
+}
+
+<div class="container mt-4">
+    <div class="d-flex justify-content-between align-items-center mb-3">
+        <h2>Product Management</h2>
+        <a class="btn btn-primary" asp-controller="Admin" asp-action="Add_Product">Add New Product</a>
+    </div>
+
+    <table class="table table-hover table-bordered">
+        <thead class="thead-dark">
+            <tr>
+                <th>Name</th>
+                <th>Price</th>
+                <th>Type</th>
+                <th>URL</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var product in Model)
+            {
+                <tr>
+                    <td>@product.Name</td>
+                    <td>@product.Price</td>
+                    <td>@product.Type.Name</td>
+                    <td><a href="@product.url" target="_blank">@product.url</a></td>
+                    <td>
+                        <a class="btn btn-sm btn-warning mr-2" asp-controller="Admin" asp-action="Update_Product"
+                           asp-route-id="@product.PrId" asp-route-slug="@product.Slug">Edit</a>
+                        <a class="btn btn-sm btn-danger" asp-controller="Admin" asp-action="Delete_Product"
+                           asp-route-id="@product.PrId" asp-route-slug="@product.Slug">Delete</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+<link rel="stylesheet" href="~/css/admin.css" />

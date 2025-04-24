@@ -1,0 +1,54 @@
+﻿@model MyElectronicShop.Models.User
+
+@{
+    ViewData["Title"] = "SignUp Page";
+}
+<link rel="stylesheet" href="~/css/signup.css" />
+
+<body>
+    <div class="con">
+        <div class="signup">
+            <form asp-controller="Auth" asp-action="SignUp" method="post">
+                <div class="container">
+                    <h1 class="header" style="margin-bottom:40px;">SignUp</h1>
+                    <div asp-validation-summary="All" class="text-danger mb-3"></div>
+
+                    <div class="group">
+                        <input asp-for="Username" placeholder=" Enter your name" />
+                    </div>
+
+                    <div class="group">
+                        <input type="email" asp-for="Email" placeholder=" Enter your email" />
+                    </div>
+
+                    <div class="group">
+                        <input type="password" asp-for="Password" placeholder=" Enter your password" />
+                    </div>
+
+                    <div class="sbtn">
+                        <form asp-asp-controller="Home" asp-action="Index">
+                            <Button class="submit">
+                                <a type="submit" style="text-decoration:none">SignUp</a>
+                            </Button>
+                        </form>
+                    </div>
+
+                    <div>
+                        <a style="text-decoration:none">Already have an account?</a>
+                    </div>
+
+                    <div class="sbtn1">
+
+                        <form asp-asp-controller="Auth" asp-action="Login">
+
+                            <Button class="submit">
+                                <a type="submit" style="text-decoration:none">Login</a>
+                            </Button>
+
+                        </form>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>

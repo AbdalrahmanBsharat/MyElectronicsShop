@@ -1,0 +1,21 @@
+﻿@model Product
+@{
+    ViewData["Title"] = "Delete Product";
+}
+
+<div class="dialog-container">
+    <div class="dialog">
+        <h3>Confirm Deletion of product @Model.Name with price @Model.Price ?</h3>
+
+        <form asp-action="Delete_Product" method="post">
+            <input type="hidden" asp-for="PrId" />
+
+            <div class="dialog-buttons">
+                <a asp-controller="Admin" asp-action="Index" class="btn btn-primary">Cancel</a>
+                <button type="submit" class="btn btn-delete">Delete</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+<link rel="stylesheet" href="~/css/delete.css" />
